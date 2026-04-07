@@ -6,20 +6,34 @@ This repo uses Cortex Code to set up a demo of a Snowflake environment — inclu
 
 ## What is Cortex Code?
 
-[Cortex Code](https://docs.snowflake.com/en/user-guide/cortex-code/cortex-code-cli) is Snowflake's AI-powered coding assistant CLI. It runs in your terminal and can execute SQL, write code, and follow guided workflows called **skills**.
+[Cortex Code](https://docs.snowflake.com/en/user-guide/cortex-code/cortex-code) is Snowflake's AI-powered coding assistant. It is available directly in **Snowsight** (no setup required) and as a **CLI** for local terminal use. Both support guided workflows called **skills**.
 
-Install and start it:
+---
+
+## Using the Quick Skill
+
+### In Snowsight (no install required)
+
+Cortex Code is built into Snowsight — open any Workspace and start chatting. To add this skill as a personal skill in your workspace:
+
+1. In your Workspace, create the directory `.snowflake/cortex/skills/snowflake-amazon-quick-skills/`
+2. Add a file named `SKILL.md` with the contents from [`snowflake-amazon-quick-skills/SKILL.md`](snowflake-amazon-quick-skills/SKILL.md) in this repo
+3. Invoke it by typing `/` in the Cortex Code message box and selecting **snowflake-amazon-quick-skills**
+
+> Personal skills in Snowsight are workspace-scoped and invoked with `/`.
+
+---
+
+### In the CLI
+
+Install the CLI:
 
 ```bash
 pip install snowflake-cli
 cortex
 ```
 
----
-
-## Using the Quick Skill
-
-### Option 1: Add as a Remote Skill (recommended)
+**Option 1: Add as a Remote Skill (recommended)**
 
 Add the following to `~/.snowflake/cortex/skills.json`:
 
@@ -37,7 +51,7 @@ Add the following to `~/.snowflake/cortex/skills.json`:
 
 Cortex Code will sync the skill automatically on next start.
 
-### Option 2: Install Manually
+**Option 2: Install Manually**
 
 ```bash
 mkdir -p ~/.snowflake/cortex/skills/snowflake-amazon-quick-skills
@@ -45,9 +59,9 @@ curl -o ~/.snowflake/cortex/skills/snowflake-amazon-quick-skills/SKILL.md \
   https://raw.githubusercontent.com/Quilpie/snowflake-quick/main/snowflake-amazon-quick-skills/SKILL.md
 ```
 
-### Invoke the Skill
+**Invoke the Skill**
 
-Once installed, tag it in Cortex Code using the `$` prefix:
+Once installed, tag it using the `$` prefix:
 
 ```
 $snowflake-amazon-quick-skills
