@@ -1,6 +1,6 @@
 # snowflake-quick
 
-This repo uses Cortex Code to set up a demo of a Snowflake environment — including warehouse and database — and creates a Cortex Agent with an MCP Server secured via OAuth to connect to Amazon QuickSight.
+This repo uses Cortex Code to set up a demo of a Snowflake environment — including warehouse and database — and creates a Cortex Agent with an MCP Server secured via OAuth to connect to Amazon Quick.
 
 ---
 
@@ -12,18 +12,18 @@ This repo uses Cortex Code to set up a demo of a Snowflake environment — inclu
 
 ## What This Skill Does
 
-This skill walks you through building a **Sales Intelligence demo** that showcases how Snowflake's AI capabilities can power natural language analytics inside Amazon QuickSight.
+This skill walks you through building a **Sales Intelligence demo** that showcases how Snowflake's AI capabilities can power natural language analytics inside Amazon Quick.
 
-The skill loads sample sales data — conversation transcripts and deal metrics — into Snowflake, then builds a **Cortex Agent** that can answer questions across both structured and unstructured data. The agent is exposed via a **Snowflake Managed MCP Server** and secured with an **OAuth integration**, giving Amazon QuickSight a direct, authenticated connection to query it using natural language.
+The skill loads sample sales data — conversation transcripts and deal metrics — into Snowflake, then builds a **Cortex Agent** that can answer questions across both structured and unstructured data. The agent is exposed via a **Snowflake Managed MCP Server** and secured with an **OAuth integration**, giving Amazon Quick a direct, authenticated connection to query it using natural language.
 
-At the end you will have a working end-to-end flow where a QuickSight user can ask questions like *"What are our top deals by value?"* or *"What was discussed in the TechCorp meeting?"* and get answers driven by Snowflake AI.
+At the end you will have a working end-to-end flow where a Amazon Quick user can ask questions like *"What are our top deals by value?"* or *"What was discussed in the TechCorp meeting?"* and get answers driven by Snowflake AI.
 
 The skill guides you through each step interactively — confirming configuration, reviewing permissions, and verifying each object before moving on.
 
 ### How it works
 
 ```
-Amazon QuickSight
+Amazon Quick
       │  OAuth 2.0
       ▼
 MCP Server  ──────────────────────────────────────▶  Cortex Agent
@@ -110,4 +110,4 @@ Cortex Code will guide you step-by-step through the full setup.
 | Semantic View | For structured sales metrics analytics |
 | Cortex Agent | Combines search and analyst tools |
 | MCP Server | Exposes the agent via Snowflake Managed MCP |
-| OAuth Integration | Secures the connection to Amazon QuickSight |
+| OAuth Integration | Secures the connection to Amazon Quick |
