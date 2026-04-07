@@ -10,6 +10,34 @@ This repo uses Cortex Code to set up a demo of a Snowflake environment — inclu
 
 ---
 
+## What This Skill Does
+
+This skill walks you through building a **Sales Intelligence demo** that showcases how Snowflake's AI capabilities can power natural language analytics inside Amazon QuickSight.
+
+The skill loads sample sales data — conversation transcripts and deal metrics — into Snowflake, then builds a **Cortex Agent** that can answer questions across both structured and unstructured data. The agent is exposed via a **Snowflake Managed MCP Server** and secured with an **OAuth integration**, giving Amazon QuickSight a direct, authenticated connection to query it using natural language.
+
+At the end you will have a working end-to-end flow where a QuickSight user can ask questions like *"What are our top deals by value?"* or *"What was discussed in the TechCorp meeting?"* and get answers driven by Snowflake AI.
+
+The skill guides you through each step interactively — confirming configuration, reviewing permissions, and verifying each object before moving on.
+
+### How it works
+
+```
+Amazon QuickSight
+      │  OAuth 2.0
+      ▼
+MCP Server  ──────────────────────────────────────▶  Cortex Agent
+                                                         │         │
+                                              Cortex Analyst   Cortex Search
+                                              (deal metrics)   (call transcripts)
+                                                   │                 │
+                                             Semantic View     SALES_CONVERSATIONS
+                                             SALES_METRICS          table
+                                                 table
+```
+
+---
+
 ## Using the Quick Skill
 
 ### In Snowsight (no install required)
