@@ -335,11 +335,14 @@ Key URLs:
 AMAZON QUICKSIGHT CONFIGURATION
 ================================
 
-Ref: https://github.com/sfc-gh-mmarzillo/cortex-mcp-quick-suite
+*Refer to official Amazon Documentation: [Signing up through the AWS Console ]([url](https://docs.aws.amazon.com/quick/latest/userguide/signing-up.html))
 
-1. Open Amazon QuickSight console
 
-2. Navigate to manage connections / add MCP data source
+1. Open Amazon Quick console
+
+2. Under Connected Apps and Data
+
+2. Navigate to **Connectors** - Model Context Protocol to add MCP data source
 
 3. Fill in:
    Server URL:         https://<ACCOUNT>.snowflakecomputing.com/api/v2/databases/<DATABASE>/schemas/<SCHEMA>/mcp-servers/QUICK_SALES_AGENT_MCP_SERVER
