@@ -80,7 +80,7 @@ CREATE TABLE <DATABASE>.<SCHEMA>.SALES_METRICS (
 
 --Then insert sample data into both tables with the INSERT statements with 10 conversation records and 15 metrics records.
 
-INSERT INTO sales_conversations 
+INSERT INTO <DATABASE>.<SCHEMA>.SALES_CONVERSATIONS
 (conversation_id, transcript_text, customer_name, deal_stage, sales_rep, conversation_date, deal_value, product_line)
 VALUES
 
@@ -105,7 +105,7 @@ VALUES
 ('CONV010', 'Quarterly strategic review with UpgradeNow Corp''s Department Heads and Analytics team. Current implementation meeting basic needs but team requiring more sophisticated analytics capabilities. Deep dive into current usage patterns revealed opportunities for workflow optimization and advanced reporting needs. Users expressed strong satisfaction with platform stability and basic features, but requiring enhanced data visualization and predictive analytics capabilities. Analytics team presented specific requirements: custom dashboard creation, advanced data modeling tools, and integrated BI features. Discussion about upgrade path from current package to Analytics Pro tier. ROI analysis presented showing potential 60% improvement in reporting efficiency. Team to present upgrade proposal to executive committee next month.', 'UpgradeNow Corp', 'Expansion', 'Rachel Torres', '2024-01-24 11:45:00', 65000, 'Analytics Pro');
 
 -- Now, let's insert corresponding data into sales_metrics
-INSERT INTO sales_metrics 
+INSERT INTO <DATABASE>.<SCHEMA>.SALES_METRICS
 (deal_id, customer_name, deal_value, close_date, sales_stage, win_status, sales_rep, product_line)
 VALUES
 ('001', 'TechCorp Inc', 75000, '2024-02-15', 'Closed', true, 'Sarah Johnson', 'Enterprise Suite'),
@@ -129,7 +129,7 @@ VALUES
 ('010', 'UpgradeNow Corp', 65000, '2024-02-18', 'Pending', false, 'Rachel Torres', 'Analytics Pro');
 
 -- Enable change tracking
-ALTER TABLE sales_conversations SET CHANGE_TRACKING = TRUE;
+ALTER TABLE <DATABASE>.<SCHEMA>.SALES_CONVERSATIONS SET CHANGE_TRACKING = TRUE;
 
 ```
 
